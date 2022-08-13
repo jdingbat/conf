@@ -31,4 +31,4 @@ os level specific configurations
 - [ ] better macosx support
 - [ ] swayidle/lock
 
-# https://github.com/meatcar/dots/blob/master/systems/tormund/user.nix
+<!--  https://github.com/meatcar/dots/blob/master/systems/tormund/user.nix -->
