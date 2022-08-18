@@ -42,7 +42,7 @@
     isNormalUser = true;
     description = "jacobsin";
     extraGroups = [ "networkmanager" "wheel" "docker"];
-    packages = with pkgs; [ ];
+    packages = with pkgs; [ zsh ];
     shell = pkgs.zsh;
   };
 
@@ -52,6 +52,7 @@
       ./modules/alacritty
       ./modules/zellij
       ./modules/nvim
+      ./modules/zsh
     ];
   };
 }

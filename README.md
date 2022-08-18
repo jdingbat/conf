@@ -24,7 +24,7 @@ os level specific configurations
 
 ## TODOS
 
-- [ ] status bar
+- [x] status bar
 - [x] split alacritty config
 - [ ] better wallpaper management
 - [x] astronvim user config injection

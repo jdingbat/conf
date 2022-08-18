@@ -8,7 +8,5 @@
   home.username = "jdingman";
   home.homeDirectory = "/Users/jdingman";
 
-  home.sessionVariables = {
-    ARCHFLAGS = "-arch aarch64";
-  };
+  home.sessionVariables = {};
 }

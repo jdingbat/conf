@@ -6,8 +6,13 @@
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
 
+  programs.gh.enable = true;
+
   home.stateVersion = "22.05";
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [
+    git
+    zsh
+  ];
 
   home.sessionPath = [ 
     "$HOME/.cargo/bin" 
@@ -19,7 +24,7 @@
 
     FZF_DEFAULT_OPTS = "--layout=reverse --inline-info --height 100% --border";
 
-    NNN_BMS="h:~;D:~/Development;c:~/Development/arte-cli";
+    NNN_BMS="h:~;D:~/Development;";
     NNN_USE_EDITOR="1";
     NNN_COLORS="1267";
   };
