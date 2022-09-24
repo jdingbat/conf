@@ -11,7 +11,7 @@
     # editor
     neovim
 
-    # rust utils
+    # utils
     fd
     gh
     xh
@@ -24,41 +24,15 @@
     cargo
     cmake
     bottom
-    direnv
     zellij
     gnumake
     ripgrep
+    
+    direnv
 
     # sys utils
     git
     zsh
     cargo
-    
-    # gui applications
-    spotify
-    alacritty
-    bitwarden
-    discord
   ];
-
-
-  programs.git.config = {
-    init = {
-      defaultBranch = "main";
-    };
-
-    user.name = "jdingbat";
-    user.email = "jayrad.personal@protonmail.com";
-  };
-
-  programs.git.signing = {
-    key = "";
-    signByDefault = true;
-  };
-
-  programs.git.extraConfig = {
-    core.editor = "nvim";
-  };
-
-  programs.gpg.enable = true;
 }

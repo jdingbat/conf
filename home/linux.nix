@@ -25,6 +25,26 @@
     systemd.enable = true;
   };
 
+  programs.git.config = {
+    init = {
+      defaultBranch = "main";
+    };
+
+    user.name = "jdingbat";
+    user.email = "jayrad.personal@protonmail.com";
+  };
+
+  programs.git.signing = {
+    key = "";
+    signByDefault = true;
+  };
+
+  programs.git.extraConfig = {
+    core.editor = "nvim";
+  };
+
+  programs.gpg.enable = true;
+
   # xdg.configFile."waybar".recursive = true;
   xdg.configFile."waybar".source = ../modules/waybar;
 

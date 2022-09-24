@@ -47,13 +47,9 @@
     unpushed = "git log --branches --not --remotes --no-walk --decorate --oneline";
   };
 
-  home.sessionPath = [ "$HOME/cargo/bin" "$HOME/.local/bin" ];
-
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
   };
-
-
 }

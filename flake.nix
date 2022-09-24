@@ -8,6 +8,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    darwin_home_manager = {
+      url = "github:nix-community/home-manager/release-22.05";
+      inputs.nixpkgs.follows = "darwin_nixpkgs";
+    };
+
     darwin_nixpkgs = {
       url = "github:nixos/nixpkgs/nixpkgs-22.05-darwin";
     };
@@ -42,15 +47,15 @@
     };
 
     darwinConfigurations = {
-      mac = nixpkgs.lib.nixosSystem {
+      mac = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         specialArgs = {
           inherit inputs;
         };
         modules = [
           ./darwin_configuration.nix
-          ./system/darwin/nix
-          home-manager.nixosModules.home-manager {
+          ./system/darwin.nix
+          darwin_home_manager.darwinModules.home-manager {
              home-manager.useGlobalPkgs = true;
              home-manager.useUserPackages = true;
            }

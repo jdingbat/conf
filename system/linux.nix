@@ -62,6 +62,12 @@ in {
 
     pciutils
     usbutils
+
+    # gui applications
+    spotify
+    alacritty
+    bitwarden
+    discord
   ];
 
   services.dbus.enable = true;
