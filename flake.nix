@@ -9,7 +9,7 @@
     };
 
     darwin_nixpkgs = {
-      url = "github:nixos/nixpkgs/nigpks-22.05-darwin";
+      url = "github:nixos/nixpkgs/nixpkgs-22.05-darwin";
     };
 
     darwin = {
