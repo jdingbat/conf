@@ -51,14 +51,14 @@
     user.email = "jayrad.personal@protonmail.com";
   };
 
-  # programs.git.signing = {
-  #   key = "";
-  #   signByDefault = true;
-  # };
+  programs.git.signing = {
+    key = "";
+    signByDefault = true;
+  };
 
-  # programs.git.extraConfig = {
-  #   core.editor = "nvim";
-  # };
+  programs.git.extraConfig = {
+    core.editor = "nvim";
+  };
 
-  # programs.gpg.enable = true;
+  programs.gpg.enable = true;
 }

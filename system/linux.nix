@@ -50,7 +50,8 @@ in {
     bemenu
     vscode
     wl-clipboard
-    firefox-wayland
+    brave
+    # firefox-wayland
   
     glib
     configure-gtk
@@ -58,6 +59,9 @@ in {
     dbus-sway-environment
     gnome3.adwaita-icon-theme
     jetbrains-mono
+
+    pciutils
+    usbutils
   ];
 
   services.dbus.enable = true;

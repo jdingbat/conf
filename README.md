@@ -4,7 +4,7 @@ A sway based system on wayland with minimal configuration.
 
 - alacritty
 - sway
-- firefox
+- brave
 - nvim
   - astronvim
 
@@ -28,7 +28,7 @@ os level specific configurations
 - [x] split alacritty config
 - [ ] better wallpaper management
 - [x] astronvim user config injection
-- [ ] better macosx support
+- [x] better macosx support
 - [ ] swayidle/lock
 
 <!--  https://github.com/meatcar/dots/blob/master/systems/tormund/user.nix -->

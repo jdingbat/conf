@@ -16,9 +16,9 @@
     ARCHFLAGS = "-arch x86_64-linux";
   };
 
-  programs.firefox = {
-    package = pkgs.firefox-wayland;
-  };
+  # programs.firefox = {
+  #   package = pkgs.firefox-wayland;
+  # };
 
   programs.waybar = {
     enable = true;

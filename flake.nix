@@ -8,6 +8,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    darwin_nixpkgs = {
+      url = "github:nixos/nixpkgs/nigpks-22.05-darwin";
+    };
+
+    darwin = {
+      url = "github:lnl7/nix-darwin/master";
+      inputs.nixpkgs.follows = "darwin_nixpkgs";
+    };
+
     nixpkgs.url = "nixpkgs/nixos-unstable";
   };
 
@@ -32,21 +41,22 @@
       };
     };
 
-    # darwinConfigurations = {
-    #   mac = nixpkgs.lib.nixosSystem {
-    #     system = "aarch64-darwin";
-    #     specialArgs = {
-    #       inherit inputs;
-    #     };
-    #     modules = [
-    #       ./darwin_configuration.nix
-    #       home-manager.nixosModules.home-manager {
-    #          home-manager.useGlobalPkgs = true;
-    #          home-manager.useUserPackages = true;
-    #        }
-    #     ];
-    #   };
-    # };
+    darwinConfigurations = {
+      mac = nixpkgs.lib.nixosSystem {
+        system = "aarch64-darwin";
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./darwin_configuration.nix
+          ./system/darwin/nix
+          home-manager.nixosModules.home-manager {
+             home-manager.useGlobalPkgs = true;
+             home-manager.useUserPackages = true;
+           }
+        ];
+      };
+    };
 
   };
 }

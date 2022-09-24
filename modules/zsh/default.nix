@@ -32,7 +32,7 @@
   ];
 
   programs.zsh.initExtra = ''
-    eval $(${pkgs.direnv}/bin/direnv hook zsh)
+    eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
   '';
 
   programs.starship.enable = true;
@@ -45,10 +45,15 @@
     cat = "bat";
     vim = "nvim";
     unpushed = "git log --branches --not --remotes --no-walk --decorate --oneline";
-
-    gwa = "git worktree add";
-    gwr = "git worktree remove";
-
-    gc = "~/.scripts/gc.sh";
   };
+
+  home.sessionPath = [ "$HOME/cargo/bin" "$HOME/.local/bin" ];
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
+
 }

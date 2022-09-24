@@ -23,11 +23,9 @@
     PRE_COMMIT_COLORS = "always";
 
     FZF_DEFAULT_OPTS = "--layout=reverse --inline-info --height 100% --border";
-
-    NNN_BMS="h:~;D:~/Development;";
-    NNN_USE_EDITOR="1";
-    NNN_COLORS="1267";
   };
+
+  programs.zsh.enable = true;
 
     # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

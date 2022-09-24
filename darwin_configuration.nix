@@ -13,6 +13,9 @@
     imports = [ 
       ./home/darwin.nix 
       ./modules/alacritty
+      ./modules/zellij
+      ./modules/nvim
+      ./modules/zsh
     ];
   };
 
