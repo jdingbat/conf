@@ -25,25 +25,25 @@
     systemd.enable = true;
   };
 
-  programs.git.config = {
-    init = {
-      defaultBranch = "main";
-    };
+  # programs.git.config = {
+  #   init = {
+  #     defaultBranch = "main";
+  #   };
 
-    user.name = "jdingbat";
-    user.email = "jayrad.personal@protonmail.com";
-  };
+  #   user.name = "jdingbat";
+  #   user.email = "jayrad.personal@protonmail.com";
+  # };
 
-  programs.git.signing = {
-    key = "";
-    signByDefault = true;
-  };
+  # programs.git.signing = {
+  #   key = "";
+  #   signByDefault = true;
+  # };
 
-  programs.git.extraConfig = {
-    core.editor = "nvim";
-  };
+  # programs.git.extraConfig = {
+  #   core.editor = "nvim";
+  # };
 
-  programs.gpg.enable = true;
+  # programs.gpg.enable = true;
 
   # xdg.configFile."waybar".recursive = true;
   xdg.configFile."waybar".source = ../modules/waybar;
@@ -64,7 +64,7 @@
       terminal = "${pkgs.alacritty}/bin/alacritty";
 
       output = {
-        "*".bg = "${config.home.homeDirectory}/conf/wallpapers/wallpaper.png fit";
+        "*".bg = "${config.home.homeDirectory}/config/home/wallpaper.png fit";
         DP-1 = {
           pos = "2560 0";
         };

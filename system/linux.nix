@@ -70,6 +70,17 @@ in {
     discord
   ];
 
+  fonts.fonts = with pkgs; [
+    font-awesome
+    source-code-pro
+    noto-fonts
+    fira-code
+    fira-code-symbols
+
+    jetbrains-mono
+    (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
+  ];
+
   services.dbus.enable = true;
   services.pipewire = {
     enable = true;
@@ -100,7 +111,7 @@ in {
 
   programs.ssh.startAgent = true;
 
-  fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
-  ];
+  # fonts.fonts = with pkgs; [
+  #   (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+  # ];
 }
